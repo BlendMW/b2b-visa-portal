@@ -1,0 +1,32 @@
+{
+  "name": "b2b-visa-portal",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@aws-amplify/backend": "^1.8.0",
+    "@aws-amplify/backend-cli": "^1.4.2",
+    "@types/node": "^22.9.3",
+    "@vitejs/plugin-vue": "^5.2.0",
+    "aws-cdk": "^2.170.0",
+    "aws-cdk-lib": "^2.170.0",
+    "constructs": "^10.4.2",
+    "esbuild": "^0.24.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vite": "^5.4.10"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.11.10",
+    "@aws-amplify/ui-vue": "^4.2.24",
+    "aws-amplify": "^6.9.0",
+    "graphql": "^15.9.0",
+    "pinia": "^2.2.6",
+    "vue-router": "^4.4.5"
+  }
+}
