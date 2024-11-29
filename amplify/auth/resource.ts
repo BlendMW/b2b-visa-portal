@@ -25,6 +25,7 @@ export const auth = defineAuth({
       required: true, // Last name of the user
     },
   },
+  groups: ['system', 'admins'], // Add required groups here
 
   // Multi-factor authentication configuration
   multifactor: {
