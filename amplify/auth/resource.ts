@@ -36,8 +36,8 @@ export const auth = defineAuth({
   // Email sender configuration
   senders: {
     email: {
-      fromEmail: "no-reply@b2bvisaportal.com", // Email address used for notifications
-      fromName: "B2B Visa Portal", // Sender name
+      fromEmail: "info@hayat.iq", // Email address used for notifications
+      fromName: "Blend by Hayat", // Sender name
     },
   },
 

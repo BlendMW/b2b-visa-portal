@@ -24,6 +24,8 @@
   "dependencies": {
     "@apollo/client": "^3.11.10",
     "@aws-amplify/ui-vue": "^4.2.24",
+    "@aws-sdk/client-dynamodb": "^3.699.0",
+    "@aws-sdk/client-ses": "^3.699.0",
     "aws-amplify": "^6.9.0",
     "graphql": "^15.9.0",
     "pinia": "^2.2.6",

@@ -1,46 +1,42 @@
 import { defineFunction } from '@aws-amplify/backend';
 
-const centralLambdaPath = './centralHandler'; // Path to central handler directory
+const centralLambdaPath = './functions'; // Directory containing handler files
 
 // Define individual functions
-export const updateVisaStatus = ({
-  functionName: 'updateVisaStatus',
-  runtime: 'nodejs18.x',
-  handler: 'index.handler',
-  codePath: centralLambdaPath,
+export const updateVisaStatus = defineFunction({
+  name: 'updateVisaStatus',
+  runtime: 20, // Node.js runtime version
+  entry: `${centralLambdaPath}/updateVisaStatus/handler.ts`, // File containing the handler function
   environment: {
     FUNCTION_NAME: 'updateVisaStatus',
     TABLE_NAME: 'VisaApplications',
   },
 });
 
-export const sendNotification = ({
-  functionName: 'sendNotification',
-  runtime: 'nodejs18.x',
-  handler: 'index.handler',
-  codePath: centralLambdaPath,
+export const sendNotification = defineFunction({
+  name: 'sendNotification',
+  runtime: 20,
+  entry: `${centralLambdaPath}/sendNotification/handler.ts`,
   environment: {
     FUNCTION_NAME: 'sendNotification',
     SES_SOURCE_EMAIL: 'info@hayat.iq',
   },
 });
 
-export const generateReport = ({
-  functionName: 'generateReport',
-  runtime: 'nodejs18.x' as const,
-  handler: 'index.handler',
-  codePath: centralLambdaPath,
+export const generateReport = defineFunction({
+  name: 'generateReport',
+  runtime: 20,
+  entry: `${centralLambdaPath}/generateReport/handler.ts`,
   environment: {
     FUNCTION_NAME: 'generateReport',
     REPORT_BUCKET: 'visa-system-reports',
   },
 });
 
-export const generateVisaTemplate = ({
-  functionName: 'generateVisaTemplate',
-  runtime: 'nodejs18.x',
-  handler: 'index.handler',
-  codePath: centralLambdaPath,
+export const generateVisaTemplate = defineFunction({
+  name: 'generateVisaTemplate',
+  runtime: 20,
+  entry: `${centralLambdaPath}/generateVisaTemplate/handler.ts`,
   environment: {
     FUNCTION_NAME: 'generateVisaTemplate',
     PDF_BUCKET: 'visa-templates',
